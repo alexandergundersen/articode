@@ -1,151 +1,171 @@
 <!DOCTYPE HTML>
 <html>
-	<head>
-		<title>arcticode</title>
-		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
-		<meta name="description" content="" />
-		<meta name="keywords" content="" />
-		<!--[if lte IE 8]><script src="css/ie/html5shiv.js"></script><![endif]-->
-		<script src="js/jquery.min.js"></script>
-		<script src="js/jquery.poptrox.min.js"></script>
-		<script src="js/skel.min.js"></script>
-		<script src="js/init.js"></script>
-		<noscript>
-			<link rel="stylesheet" href="css/skel-noscript.css" />
-			<link rel="stylesheet" href="css/style.css" />
-			<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
-		</noscript>
-		<!--[if lte IE 8]><link rel="stylesheet" href="css/ie/v8.css" /><![endif]-->
 
-		<!-- Favion / Manifest / Meta -->
-		<link rel="apple-touch-icon" sizes="57x57" href="images/icon/apple-icon-57x57.png">
-		<link rel="apple-touch-icon" sizes="60x60" href="images/icon/apple-icon-60x60.png">
-		<link rel="apple-touch-icon" sizes="72x72" href="images/icon/apple-icon-72x72.png">
-		<link rel="apple-touch-icon" sizes="76x76" href="images/icon/apple-icon-76x76.png">
-		<link rel="apple-touch-icon" sizes="114x114" href="images/icon/apple-icon-114x114.png">
-		<link rel="apple-touch-icon" sizes="120x120" href="images/icon/apple-icon-120x120.png">
-		<link rel="apple-touch-icon" sizes="144x144" href="images/icon/apple-icon-144x144.png">
-		<link rel="apple-touch-icon" sizes="152x152" href="images/icon/apple-icon-152x152.png">
-		<link rel="apple-touch-icon" sizes="180x180" href="images/icon/apple-icon-180x180.png">
-		<link rel="icon" type="image/png" sizes="192x192"  href="images/icon/android-icon-192x192.png">
-		<link rel="icon" type="image/png" sizes="32x32" href="images/icon/favicon-32x32.png">
-		<link rel="icon" type="image/png" sizes="96x96" href="images/icon/favicon-96x96.png">
-		<link rel="icon" type="image/png" sizes="16x16" href="images/icon/favicon-16x16.png">
-		<link rel="manifest" href="images/icon/manifest.json">
-		<meta name="msapplication-TileColor" content="#ffffff">
-		<meta name="msapplication-TileImage" content="images/icon/ms-icon-144x144.png">
-		<meta name="theme-color" content="#ffffff">
-	</head>
-	<body>
-		
-		<!-- Header -->
-			<header id="header">
+<head>
+  <title>arcticode</title>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+  <meta name="description" content="" />
+  <meta name="keywords" content="" />
+  <!--[if lte IE 8]><script src="css/ie/html5shiv.js"></script><![endif]-->
+  <script src="js/jquery.min.js"></script>
+  <script src="js/jquery.poptrox.min.js"></script>
+  <script src="js/skel.min.js"></script>
+  <script src="js/init.js"></script>
+  <noscript>
+    <link rel="stylesheet" href="css/skel-noscript.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+  </noscript>
+  <!--[if lte IE 8]><link rel="stylesheet" href="css/ie/v8.css" /><![endif]-->
 
-				<!-- Logo -->
-					<h1 id="logo"><a href="#intro">arcticode</a></h1>
-				
-				<!-- Nav -->
-					<nav id="nav">
-						<ul>
-							<li><a href="#one">Hvem vi er</a></li>
-							<li><a href="#two">Hva gjør vi</a></li>
-							<li><a href="#work">Vårt arbeid</a></li>
-							<li><a href="#contact">Kontakt oss</a></li>
-						</ul>
-					</nav>
+  <!-- Favion / Manifest / Meta -->
+  <link rel="apple-touch-icon" sizes="57x57" href="images/icon/apple-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="images/icon/apple-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="images/icon/apple-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="images/icon/apple-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="images/icon/apple-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="images/icon/apple-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="images/icon/apple-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="images/icon/apple-icon-152x152.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="images/icon/apple-icon-180x180.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="images/icon/android-icon-192x192.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="images/icon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="96x96" href="images/icon/favicon-96x96.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="images/icon/favicon-16x16.png">
+  <link rel="manifest" href="images/icon/manifest.json">
+  <meta name="msapplication-TileColor" content="#ffffff">
+  <meta name="msapplication-TileImage" content="images/icon/ms-icon-144x144.png">
+  <meta name="theme-color" content="#ffffff">
+</head>
 
-					<div class="progress-container">
-						<div class="progress-bar" id="myBar"></div>
-					</div> 
-			</header>
+<body>
 
-			<script>
-			// When the user scrolls the page, execute myFunction 
-				window.onscroll = function() {myFunction()};
+  <!-- Header -->
+  <header id="header">
 
-				function myFunction() {
-					var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
-					var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
-					var scrolled = (winScroll / height) * 100;
-					document.getElementById("myBar").style.width = scrolled + "%";
-				}
-			</script>
-			
-		<!-- Intro -->
-			<section id="intro" class="main style1 dark fullscreen">
-				<div class="content container small">
-					<header>
-						<img src="images/logo_new_white.png" alt="logo" height="500px" width="500px">
-					</header>
-					<h1>Velkommen til <br><span style="color:#39454b;font-size:2em;">arcticode</span></h1>
-					<footer>
-						<a href="#one" class="button style2 down">More</a>
-					</footer>
-				</div>
-			</section>
-		
-		<!-- One -->
-			<section id="one" class="main style2 right dark fullscreen">
-				<div class="content box style2">
-					<header>
-						<h2>Hvem vi er</h2>
-					</header>
-					<p>Lorem ipsum dolor sit amet et sapien sed elementum egestas dolore condimentum. 
-					Fusce blandit ultrices sapien, in accumsan orci rhoncus eu. Sed sodales venenatis arcu, 
-					id varius justo euismod in. Curabitur egestas consectetur magna urna.</p>
-				</div>
-				<a href="#two" class="button style2 down anchored">Next</a>
-			</section>
-		
-		<!-- Two -->
-			<section id="two" class="main style2 left dark fullscreen">
-				<div class="content box style2">
-					<header>
-						<h2>Hva gjør vi</h2>
-					</header>
-					<p>Lorem ipsum dolor sit amet et sapien sed elementum egestas dolore condimentum. 
-					Fusce blandit ultrices sapien, in accumsan orci rhoncus eu. Sed sodales venenatis arcu, 
-					id varius justo euismod in. Curabitur egestas consectetur magna urna.</p>
-				</div>
-				<a href="#work" class="button style2 down anchored">Next</a>
-			</section>
-			
-		<!-- Work -->
-			<section id="work" class="main style3 primary">
-				<div class="content container">
-					<header>
-						<h2>Vårt arbeid</h2>
-						<p>Lorem ipsum dolor sit amet et sapien sed elementum egestas dolore condimentum. 
-						Fusce blandit ultrices sapien, in accumsan orci rhoncus eu. Sed sodales venenatis 
-						arcu, id varius justo euismod in. Curabitur egestas consectetur magna vitae urna.</p>
-					</header>
-					
-						<div class="container small gallery">
-							<div class="row flush images">
-								<div class="6u"><a href="images/topps-app.png" class="image full l"><img src="images/topps-app.png" title="topps App" alt="topps App" /></a></div>
-								<div class="6u"><a href="images/fulls/02.jpg" class="image full r"><img src="images/thumbs/02.jpg" title="topps Web" alt="topps Web" /></a></div>
-							</div>
-						</div>
-				</div>
-			</section>
-			
-		<!-- Contact -->
-			<section id="contact" class="main style3 secondary">
-				<div class="content container">
-					<header>
-						<h6>
-							<a class="info" href="mailto:topps.applications@gmail.com?Subject=Henvendelse%20til%20arcticode" target="_blank" >Ta kontakt med oss</a>
-						</h6>
-						<br>
-						<p>Ønsker du å komme i kontakt med oss så er det bare å trykke knappen</p>
-					</header>
-				</div>
-			</section>
-			
-		<!-- Footer -->
-			<footer id="footer">
-			
-					<!-- <ul class="actions">
+    <!-- Logo -->
+    <h1 id="logo">
+      <a href="#intro">arcticode</a>
+    </h1>
+
+    <!-- Nav -->
+    <nav id="nav">
+      <ul>
+        <li>
+          <a href="#one">Hvem vi er</a>
+        </li>
+        <li>
+          <a href="#two">Hva gjør vi</a>
+        </li>
+        <li>
+          <a href="#work">Vårt arbeid</a>
+        </li>
+        <li>
+          <a href="#contact">Kontakt oss</a>
+        </li>
+      </ul>
+    </nav>
+
+    <div class="progress-container">
+      <div class="progress-bar" id="myBar"></div>
+    </div>
+  </header>
+
+  <script>
+    // When the user scrolls the page, execute myFunction 
+    window.onscroll = function () { myFunction() };
+
+    function myFunction() {
+      var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+      var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+      var scrolled = (winScroll / height) * 100;
+      document.getElementById("myBar").style.width = scrolled + "%";
+    }
+  </script>
+
+  <!-- Intro -->
+  <section id="intro" class="main style1 dark fullscreen">
+    <div class="content container small">
+      <header>
+        <img src="images/logo_new_white.png" alt="logo" height="500px" width="500px">
+      </header>
+      <h1>Velkommen til
+        <br>
+        <span class="arcticode-title">arcticode</span>
+      </h1>
+      <footer>
+        <a href="#one" class="button style2 down">More</a>
+      </footer>
+    </div>
+  </section>
+
+  <!-- One -->
+  <section id="one" class="main style2 right dark fullscreen">
+    <div class="content box style2">
+      <header>
+        <h2>Hvem vi er</h2>
+      </header>
+      <p>Lorem ipsum dolor sit amet et sapien sed elementum egestas dolore condimentum. Fusce blandit ultrices sapien, in accumsan
+        orci rhoncus eu. Sed sodales venenatis arcu, id varius justo euismod in. Curabitur egestas consectetur magna urna.</p>
+    </div>
+    <a href="#two" class="button style2 down anchored">Next</a>
+  </section>
+
+  <!-- Two -->
+  <section id="two" class="main style2 left dark fullscreen">
+    <div class="content box style2">
+      <header>
+        <h2>Hva gjør vi</h2>
+      </header>
+      <p>Lorem ipsum dolor sit amet et sapien sed elementum egestas dolore condimentum. Fusce blandit ultrices sapien, in accumsan
+        orci rhoncus eu. Sed sodales venenatis arcu, id varius justo euismod in. Curabitur egestas consectetur magna urna.</p>
+    </div>
+    <a href="#work" class="button style2 down anchored">Next</a>
+  </section>
+
+  <!-- Work -->
+  <section id="work" class="main style3 primary">
+    <div class="content container">
+      <header>
+        <h2>Vårt arbeid</h2>
+        <p>Lorem ipsum dolor sit amet et sapien sed elementum egestas dolore condimentum. Fusce blandit ultrices sapien, in
+          accumsan orci rhoncus eu. Sed sodales venenatis arcu, id varius justo euismod in. Curabitur egestas consectetur
+          magna vitae urna.</p>
+      </header>
+
+      <div class="container small gallery">
+        <div class="row flush images">
+          <div class="6u">
+            <!-- <a href="images/topps-app.png" class="image full l">
+              <img src="images/topps-app.png" title="topps App" alt="topps App" />
+            </a> -->
+          </div>
+          <div class="6u">
+            <!-- <a href="images/fulls/02.jpg" class="image full r">
+              <img src="images/thumbs/02.jpg" title="topps Web" alt="topps Web" />
+            </a> -->
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact" class="main style3 secondary">
+    <div class="content container">
+      <header>
+        <h6>
+          <a class="info" href="mailto:topps.applications@gmail.com?Subject=Henvendelse%20til%20arcticode" target="_blank">Ta kontakt med oss</a>
+        </h6>
+        <br>
+      </header>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer id="footer">
+
+    <!-- <ul class="actions">
 						<li><a href="#" class="fa solo fa-twitter"><span>Twitter</span></a></li>
 						<li><a href="#" class="fa solo fa-facebook"><span>Facebook</span></a></li>
 						<li><a href="#" class="fa solo fa-google-plus"><span>Google+</span></a></li>
@@ -154,13 +174,16 @@
 						<li><a href="#" class="fa solo fa-instagram"><span>Instagram</span></a></li>
 					</ul> -->
 
-				<!-- Menu -->
-					<ul class="menu">
-						<li>&copy; arcticode 2018</li>
-						<li>Design: <a href="http://html5up.net/">HTML5 UP</a></li>
-					</ul>
-			
-			</footer>
+    <!-- Menu -->
+    <ul class="menu">
+      <li>&copy; arcticode 2018</li>
+      <li>Design:
+        <a href="http://html5up.net/">HTML5 UP</a>
+      </li>
+    </ul>
 
-	</body>
+  </footer>
+
+</body>
+
 </html>
