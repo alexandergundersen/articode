@@ -1461,3 +1461,21 @@
 			body.touch .poptrox-popup .closer {
 				opacity: 1.0 !important;
 			}
+
+#orgInfo{
+	display: inline-block; 
+	line-height: 1em; 
+	margin-top:40px; 
+	font-size: 12px; 
+	margin-left:20px;
+}
+
+#terms {
+	display: inline-block; 
+	font-size: 12px; 
+	margin-left: 60px;
+}
+
+	#terms a {
+		text-decoration: none;
+	}

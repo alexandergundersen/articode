@@ -1,0 +1,205 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <title>Contact</title>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+    <!--[if lte IE 8]><script src="css/ie/html5shiv.js"></script><![endif]-->
+    <script src="js/jquery.min.js"></script>
+    <script src="js/jquery.poptrox.min.js"></script>
+    <script src="js/skel.min.js"></script>
+    <script src="js/init.js"></script>
+    <noscript>
+        <link rel="stylesheet" href="css/skel-noscript.css" />
+        <link rel="stylesheet" href="css/style.css" />
+        <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    </noscript>
+    <!--[if lte IE 8]><link rel="stylesheet" href="css/ie/v8.css" /><![endif]-->
+
+    <!-- Favion / Manifest / Meta -->
+    <link rel="apple-touch-icon" sizes="57x57" href="images/icon/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="images/icon/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="images/icon/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="images/icon/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="images/icon/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="images/icon/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="images/icon/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="images/icon/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="images/icon/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="images/icon/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/icon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="images/icon/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="images/icon/favicon-16x16.png">
+    <link rel="manifest" href="images/icon/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="images/icon/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+    <script>
+
+        window.onload = function () {
+            $('#kunde').hide();
+            $('#support').hide();
+            $("#resten").hide();
+
+            $("#form").submit(function (e) {
+                e.preventDefault();
+
+                var subStr = encodeURIComponent($('#title').val().trim());
+                var bodyStr = encodeURIComponent($('#message').val().trim());
+                console.log(subStr, bodyStr);
+                window.open('mailto:test@example.com?subject='+subStr+"&body="+bodyStr);
+                // needs to return false to prevent reloading window
+                return false;
+            });
+        }
+
+        function showBusiness() {
+            $('#kunde').show();
+            $('#support').show();
+            $("#resten").show();
+            $("#navn").html('Firmanavn');
+        }
+        function showPrivate() {
+            $('#support').show();
+            $('#kunde').hide();
+            $("#resten").show();
+            $("#navn").html('Navn');
+        }
+
+        function submitData() {
+            console.log("potato");
+            $('#email').val("potato");
+            //$('#subject').val("Hei jeg heter fabian");
+
+            e
+        }
+    </script>
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header id="header">
+
+        <!-- Logo -->
+        <h1 id="logo">
+            <a href="index.html#intro">arcticode</a>
+        </h1>
+
+        <!-- Nav -->
+        <nav id="nav">
+            <ul>
+                <li>
+                    <a href="index.html#one">Hvem vi er</a>
+                </li>
+                <li>
+                    <a href="index.html#two">Hva gjør vi</a>
+                </li>
+                <li>
+                    <a href="index.html#work">Vårt arbeid</a>
+                </li>
+                <li>
+                    <a href="index.html#contact">Kontakt oss</a>
+                </li>
+            </ul>
+        </nav>
+
+        <div class="progress-container">
+            <div class="progress-bar" id="myBar"></div>
+        </div>
+    </header>
+
+    <script>
+        // When the user scrolls the page, execute myFunction 
+        window.onscroll = function () { myFunction() };
+
+        function myFunction() {
+            var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+            var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+            var scrolled = (winScroll / height) * 100;
+            document.getElementById("myBar").style.width = scrolled + "%";
+        }
+    </script>
+
+
+
+    <!-- ------------------------------------------------- MAIN ------------------------------------------------------------------ -->
+
+    <div id="form" style="margin:100px;">
+        <form action="">
+
+            <input type="radio" name="customerType" value="bedrift" id="bedrift" onclick="javascript:showBusiness()"> Bedriftskunde
+            <input type="radio" name="customerType" value="privat" id="privat" onclick="javascript:showPrivate()"> Privatkunde
+            <br>
+
+            <span id="kunde" style="display: none">
+                <input type="radio" name="issueType" value="bedrift"> Ny kunde</span>
+            <span id="support" style=" display: none">
+                <input type="radio" name="issueType" value="privat" checked> Support</span>
+            <br>
+            <br>
+
+            <span id="resten">
+                <span id="navn">Firmanavn</span>
+                <input type="text" name="name">
+                <br> Epost
+                <input type="text" name="email" id="email">
+                <br> Telefon
+                <input type="text" name="phone">
+                <br> Tittel
+                <input type="text" name="title" id="title">
+                <br> Tekst
+                <textarea name="message" rows="10" cols="30" id="message"></textarea>
+                <br>
+                <INPUT TYPE="hidden" NAME="subject" id="subject" VALUE="web_monitor">
+                <input type="submit" value="Submit" onclick="javascript:submitData()">
+            </span>
+
+        </form>
+    </div>
+
+
+
+    <!-- Footer -->
+    <footer id="footer">
+
+        <!--
+    <ul class="actions">
+						<li><a href="index.html#" class="fa solo fa-twitter"><span>Twitter</span></a></li>
+						<li><a href="index.html#" class="fa solo fa-facebook"><span>Facebook</span></a></li>
+						<li><a href="index.html#" class="fa solo fa-google-plus"><span>Google+</span></a></li>
+						<li><a href="index.html#" class="fa solo fa-dribbble"><span>Dribbble</span></a></li>
+						<li><a href="index.html#" class="fa solo fa-pinterest"><span>Pinterest</span></a></li>
+						<li><a href="index.html#" class="fa solo fa-instagram"><span>Instagram</span></a></li>
+          </ul>
+          -->
+        <ul>
+            <li id="orgInfo">Arcticode AS
+                <br> Orgnr: 920 359 507
+                <br> Orrevegen 246 4352 KLEPPE</li>
+            <li id="terms">
+                <a href="terms.html">Terms and Agreements</a>
+            </li>
+        </ul>
+
+        <ul>
+            <li "display: inline-block">
+                POTATO
+            </li>
+        </ul>
+
+        <!-- Menu -->
+        <ul class="menu">
+            <li>&copy; arcticode 2018</li>
+            <li>Design:
+                <a href="http://html5up.net/">HTML5 UP</a>
+            </li>
+        </ul>
+
+    </footer>
+
+</body>
+
+</html>
