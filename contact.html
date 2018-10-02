@@ -45,14 +45,23 @@
 
             $("#form").submit(function (e) {
                 e.preventDefault();
-
+                /*
                 var subStr = encodeURIComponent($('#title').val().trim());
                 var bodyStr = encodeURIComponent($('#message').val().trim());
                 console.log(subStr, bodyStr);
                 window.open('mailto:topps.application@gmail.com?subject='+subStr+"&body="+bodyStr);
+                */
                 // needs to return false to prevent reloading window
                 return false;
             });
+        }
+
+        function checkCustomerType(){
+            console.log("checking customer type");
+            var customerType = $('#customerType').val();
+            if(customerType === "bedrift") showBusiness();
+            else if(customerType == "privat") showPrivate();
+            
         }
 
         function showBusiness() {
@@ -69,11 +78,16 @@
         }
 
         function submitData() {
-            console.log("potato");
-            $('#email').val("potato");
-            //$('#subject').val("Hei jeg heter fabian");
-
-            e
+            var result = "customerType_" +
+                     encodeURIComponent($('#customerType').val().trim()) + "_issueType_" +
+                     encodeURIComponent($('input[name="issueType"]:checked').val().trim()) + "_name_" +
+                     encodeURIComponent($('#name').val().trim()) + "_email_" +
+                     encodeURIComponent($('#email').val().trim()) + "_phone_" +
+                     encodeURIComponent($('#phone').val().trim()) + "_source_" +
+                     encodeURIComponent($('#subject').val().trim())
+            console.log("running submitData", result);
+            window.open('mailto:topps.application@gmail.com?subject='+result+"&body="+encodeURIComponent($('#message').val().trim()));
+            //window.open('mailto:topps.application@gmail.com?subject='+result+"&body="+encodeURIComponent($('#message').val().trim()));
         }
     </script>
 </head>
@@ -129,30 +143,26 @@
 
     <div id="form" style="margin:100px;">
         <form action="">
-
-            <input type="radio" name="customerType" value="bedrift" id="bedrift" onclick="javascript:showBusiness()"> Bedriftskunde
-            <input type="radio" name="customerType" value="privat" id="privat" onclick="javascript:showPrivate()"> Privatkunde
-            <br>
+            Kundetype
+            <select name="customerType" style="width: 30%" required onchange="javascript:checkCustomerType()" id="customerType">
+                <option disabled selected value> -- velg -- </option>
+                <option value="bedrift">Bedriftskunde</option>
+                <option value="privat">Privatkunde</option>
+              </select>
 
             <span id="kunde" style="display: none">
-                <input type="radio" name="issueType" value="bedrift"> Ny kunde</span>
+                <input type="radio" name="issueType" value="nyKunde" required> Ny kunde</span>
             <span id="support" style=" display: none">
-                <input type="radio" name="issueType" value="privat" checked> Support</span>
+                <input type="radio" name="issueType" value="support" required> Support</span>
             <br>
             <br>
 
             <span id="resten">
                 <span id="navn">Firmanavn</span>
-                <input type="text" name="name">
-                <br> Epost
-                <input type="text" name="email" id="email">
-                <br> Telefon
-                <input type="text" name="phone">
-                <br> Tittel
-                <input type="text" name="title" id="title">
-                <br> Tekst
-                <textarea name="message" rows="10" cols="30" id="message"></textarea>
-                <br>
+                <input type="text" name="name" id="name" style="width: 30%">
+                Epost <input type="text" name="email" id="email"style="width: 30%">
+                Telefon <input type="text" name="phone" id="phone" style="width: 30%">
+                Beskrivelse <textarea name="message" rows="10" cols="30" id="message"></textarea>
                 <INPUT TYPE="hidden" NAME="subject" id="subject" VALUE="web_monitor">
                 <input type="submit" value="Submit" onclick="javascript:submitData()">
             </span>
@@ -181,12 +191,6 @@
                 <br> Orrevegen 246 4352 KLEPPE</li>
             <li id="terms">
                 <a href="terms.html">Terms and Agreements</a>
-            </li>
-        </ul>
-
-        <ul>
-            <li "display: inline-block">
-                POTATO
             </li>
         </ul>
 
