@@ -39,6 +39,14 @@
     <script>
 
         window.onload = function () {
+
+
+            $('#form > form > span > input').each(function () { alignForm($(this)) });
+            $('#form > form > span').each(function () { alignForm($(this)) });
+            $('#form > form > span > textarea').each(function () { alignForm($(this)) });
+            $('#form > form > select').each(function () { alignForm($(this)) });
+            $('textarea').css('text-align', 'left');
+
             $('#kunde').hide();
             $('#support').hide();
             $("#resten").hide();
@@ -56,12 +64,16 @@
             });
         }
 
-        function checkCustomerType(){
+        function alignForm(e) {
+            $(e).css('display', 'block').css('margin-left', 'auto').css('margin-right', 'auto').css('text-align', 'center');
+        }
+
+        function checkCustomerType() {
             console.log("checking customer type");
             var customerType = $('#customerType').val();
-            if(customerType === "bedrift") showBusiness();
-            else if(customerType == "privat") showPrivate();
-            
+            if (customerType === "bedrift") showBusiness();
+            else if (customerType == "privat") showPrivate();
+
         }
 
         function showBusiness() {
@@ -79,14 +91,14 @@
 
         function submitData() {
             var result = "customerType_" +
-                     encodeURIComponent($('#customerType').val().trim()) + "_issueType_" +
-                     encodeURIComponent($('input[name="issueType"]:checked').val().trim()) + "_name_" +
-                     encodeURIComponent($('#name').val().trim()) + "_email_" +
-                     encodeURIComponent($('#email').val().trim()) + "_phone_" +
-                     encodeURIComponent($('#phone').val().trim()) + "_source_" +
-                     encodeURIComponent($('#subject').val().trim())
+                encodeURIComponent($('#customerType').val().trim()) + "_issueType_" +
+                encodeURIComponent($('input[name="issueType"]:checked').val().trim()) + "_name_" +
+                encodeURIComponent($('#name').val().trim()) + "_email_" +
+                encodeURIComponent($('#email').val().trim()) + "_phone_" +
+                encodeURIComponent($('#phone').val().trim()) + "_source_" +
+                encodeURIComponent($('#subject').val().trim())
             console.log("running submitData", result);
-            window.open('mailto:topps.application@gmail.com?subject='+result+"&body="+encodeURIComponent($('#message').val().trim()));
+            window.open('mailto:topps.application@gmail.com?subject=' + result + "&body=" + encodeURIComponent($('#message').val().trim()));
             //window.open('mailto:topps.application@gmail.com?subject='+result+"&body="+encodeURIComponent($('#message').val().trim()));
         }
     </script>
@@ -141,28 +153,29 @@
 
     <!-- ------------------------------------------------- MAIN ------------------------------------------------------------------ -->
 
-    <div id="form" style="margin:100px;">
+    <div id="form" style="margin:20px">
         <form action="">
-            Kundetype
-            <select name="customerType" style="width: 30%" required onchange="javascript:checkCustomerType()" id="customerType">
+            <span>Kundetype</span>
+            <select name="customerType" style="width: 100%; max-width: 200px" required onchange="javascript:checkCustomerType()" id="customerType">
                 <option disabled selected value> -- velg -- </option>
                 <option value="bedrift">Bedriftskunde</option>
                 <option value="privat">Privatkunde</option>
-              </select>
+            </select>
 
-            <span id="kunde" style="display: none">
-                <input type="radio" name="issueType" value="nyKunde" required> Ny kunde</span>
-            <span id="support" style=" display: none">
-                <input type="radio" name="issueType" value="support" required> Support</span>
-            <br>
+            <span>
+                <span id="kunde" style="display: none">
+                    <input type="radio" name="issueType" value="nyKunde" required> Ny kunde</span>
+                <span id="support" style=" display: none">
+                    <input type="radio" name="issueType" value="support" required> Support</span>
+            </span>
             <br>
 
             <span id="resten">
                 <span id="navn">Firmanavn</span>
-                <input type="text" name="name" id="name" style="width: 30%">
-                Epost <input type="text" name="email" id="email"style="width: 30%">
-                Telefon <input type="text" name="phone" id="phone" style="width: 30%">
-                Beskrivelse <textarea name="message" rows="10" cols="30" id="message"></textarea>
+                <input type="text" name="name" id="name" style="width: 100%; max-width: 500px;"> Epost
+                <input type="text" name="email" id="email" style="width: 100%; max-width: 500px;"> Telefon
+                <input type="text" name="phone" id="phone" style="width: 100%; max-width: 500px;"> Beskrivelse
+                <textarea name="message" rows="10" cols="30" id="message" style="width: 100%; max-width: 700px; text-align: left"></textarea>
                 <INPUT TYPE="hidden" NAME="subject" id="subject" VALUE="web_monitor">
                 <input type="submit" value="Submit" onclick="javascript:submitData()">
             </span>
