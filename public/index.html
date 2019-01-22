@@ -1,187 +1,238 @@
-<!DOCTYPE HTML>
+<!DOCTYPE html>
 <html>
+  <head>
+    <title>arcticode</title>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+    <!--[if lte IE 8]><script src="css/ie/html5shiv.js"></script><![endif]-->
+    <script src="js/jquery.min.js"></script>
+    <script src="js/jquery.poptrox.min.js"></script>
+    <script src="js/skel.min.js"></script>
+    <script src="js/init.js"></script>
+    <noscript>
+      <link rel="stylesheet" href="css/skel-noscript.css" />
+      <link rel="stylesheet" href="css/style.css" />
+      <link
+        href="https://fonts.googleapis.com/css?family=Roboto"
+        rel="stylesheet"
+      />
+    </noscript>
+    <!--[if lte IE 8]><link rel="stylesheet" href="css/ie/v8.css"/><![endif]-->
 
-<head>
-  <title>arcticode</title>
-  <meta http-equiv="content-type" content="text/html; charset=utf-8" />
-  <meta name="description" content="" />
-  <meta name="keywords" content="" />
-  <!--[if lte IE 8]><script src="css/ie/html5shiv.js"></script><![endif]-->
-  <script src="js/jquery.min.js"></script>
-  <script src="js/jquery.poptrox.min.js"></script>
-  <script src="js/skel.min.js"></script>
-  <script src="js/init.js"></script>
-  <noscript>
-    <link rel="stylesheet" href="css/skel-noscript.css" />
-    <link rel="stylesheet" href="css/style.css" />
-    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
-  </noscript>
-  <!--[if lte IE 8]><link rel="stylesheet" href="css/ie/v8.css" /><![endif]-->
+    <!-- Favion / Manifest / Meta -->
+    <link
+      rel="apple-touch-icon"
+      sizes="57x57"
+      href="images/icon/apple-icon-57x57.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="60x60"
+      href="images/icon/apple-icon-60x60.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="72x72"
+      href="images/icon/apple-icon-72x72.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="76x76"
+      href="images/icon/apple-icon-76x76.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="114x114"
+      href="images/icon/apple-icon-114x114.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="120x120"
+      href="images/icon/apple-icon-120x120.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="144x144"
+      href="images/icon/apple-icon-144x144.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="152x152"
+      href="images/icon/apple-icon-152x152.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="images/icon/apple-icon-180x180.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="192x192"
+      href="images/icon/android-icon-192x192.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="images/icon/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="96x96"
+      href="images/icon/favicon-96x96.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="images/icon/favicon-16x16.png"
+    />
+    <link rel="manifest" href="images/icon/manifest.json" />
+    <meta name="msapplication-TileColor" content="#ffffff" />
+    <meta
+      name="msapplication-TileImage"
+      content="images/icon/ms-icon-144x144.png"
+    />
+    <meta name="theme-color" content="#ffffff" />
+  </head>
 
-  <!-- Favion / Manifest / Meta -->
-  <link rel="apple-touch-icon" sizes="57x57" href="images/icon/apple-icon-57x57.png">
-  <link rel="apple-touch-icon" sizes="60x60" href="images/icon/apple-icon-60x60.png">
-  <link rel="apple-touch-icon" sizes="72x72" href="images/icon/apple-icon-72x72.png">
-  <link rel="apple-touch-icon" sizes="76x76" href="images/icon/apple-icon-76x76.png">
-  <link rel="apple-touch-icon" sizes="114x114" href="images/icon/apple-icon-114x114.png">
-  <link rel="apple-touch-icon" sizes="120x120" href="images/icon/apple-icon-120x120.png">
-  <link rel="apple-touch-icon" sizes="144x144" href="images/icon/apple-icon-144x144.png">
-  <link rel="apple-touch-icon" sizes="152x152" href="images/icon/apple-icon-152x152.png">
-  <link rel="apple-touch-icon" sizes="180x180" href="images/icon/apple-icon-180x180.png">
-  <link rel="icon" type="image/png" sizes="192x192" href="images/icon/android-icon-192x192.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="images/icon/favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="96x96" href="images/icon/favicon-96x96.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="images/icon/favicon-16x16.png">
-  <link rel="manifest" href="images/icon/manifest.json">
-  <meta name="msapplication-TileColor" content="#ffffff">
-  <meta name="msapplication-TileImage" content="images/icon/ms-icon-144x144.png">
-  <meta name="theme-color" content="#ffffff">
-</head>
+  <body>
+    <!-- Header -->
+    <header id="header">
+      <!-- Logo -->
+      <h1 id="logo"><a href="#intro">arcticode</a></h1>
 
-<body>
+      <!-- Nav -->
+      <nav id="nav">
+        <ul>
+          <li><a href="#one">Hvem vi er</a></li>
+          <li><a href="#two">Hva gjør vi</a></li>
+          <li><a href="#work">Vårt arbeid</a></li>
+          <li><a href="#contact">Kontakt oss</a></li>
+        </ul>
+      </nav>
 
-  <!-- Header -->
-  <header id="header">
+      <div class="progress-container">
+        <div class="progress-bar" id="myBar"></div>
+      </div>
+    </header>
 
-    <!-- Logo -->
-    <h1 id="logo">
-      <a href="#intro">arcticode</a>
-    </h1>
+    <script>
+      // When the user scrolls the page, execute myFunction
+      window.onscroll = function() {
+        myFunction();
+      };
 
-    <!-- Nav -->
-    <nav id="nav">
-      <ul>
-        <li>
-          <a href="#one">Hvem vi er</a>
-        </li>
-        <li>
-          <a href="#two">Hva gjør vi</a>
-        </li>
-        <li>
-          <a href="#work">Vårt arbeid</a>
-        </li>
-        <li>
-          <a href="#contact">Kontakt oss</a>
-        </li>
-      </ul>
-    </nav>
+      function myFunction() {
+        var winScroll =
+          document.body.scrollTop || document.documentElement.scrollTop;
+        var height =
+          document.documentElement.scrollHeight -
+          document.documentElement.clientHeight;
+        var scrolled = (winScroll / height) * 100;
+        document.getElementById('myBar').style.width = scrolled + '%';
+      }
+    </script>
 
-    <div class="progress-container">
-      <div class="progress-bar" id="myBar"></div>
-    </div>
-  </header>
+    <!-- Intro -->
+    <section id="intro" class="main style1 dark fullscreen">
+      <div class="content container small">
+        <header>
+          <img
+            src="images/logo_new_white.png"
+            alt="logo"
+            height="500px"
+            width="500px"
+          />
+        </header>
+        <h1>
+          Velkommen til <br />
+          <span class="arcticode-title">arcticode</span>
+        </h1>
+        <footer><a href="#one" class="button style2 down">More</a></footer>
+      </div>
+    </section>
 
-  <script>
-    // When the user scrolls the page, execute myFunction 
-    window.onscroll = function () { myFunction() };
+    <!-- One -->
+    <section id="one" class="main style2 right dark fullscreen">
+      <div class="content box style2">
+        <header>
+          <h2>
+            “In a dark place we find ourselves, and a little more knowledge
+            lights our way.”
+          </h2>
+        </header>
+        <p></p>
+      </div>
+      <a href="#two" class="button style2 down anchored">Next</a>
+    </section>
 
-    function myFunction() {
-      var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
-      var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
-      var scrolled = (winScroll / height) * 100;
-      document.getElementById("myBar").style.width = scrolled + "%";
-    }
-  </script>
+    <!-- Two -->
+    <section id="two" class="main style2 left dark fullscreen">
+      <div class="content box style2">
+        <header><h2>“Do or do not. There is no try.”</h2></header>
+        <p></p>
+      </div>
+      <a href="#work" class="button style2 down anchored">Next</a>
+    </section>
 
-  <!-- Intro -->
-  <section id="intro" class="main style1 dark fullscreen">
-    <div class="content container small">
-      <header>
-        <img src="images/logo_new_white.png" alt="logo" height="500px" width="500px">
-      </header>
-      <h1>Velkommen til
-        <br>
-        <span class="arcticode-title">arcticode</span>
-      </h1>
-      <footer>
-        <a href="#one" class="button style2 down">More</a>
-      </footer>
-    </div>
-  </section>
+    <!-- Work -->
+    <section id="work" class="main style3 primary">
+      <div class="content container">
+        <header>
+          <h2>
+            “Now, witness the power of this fully operational battle station.”
+          </h2>
+          <p></p>
+        </header>
 
-  <!-- One -->
-  <section id="one" class="main style2 right dark fullscreen">
-    <div class="content box style2">
-      <header>
-        <h2>Hvem vi er</h2>
-      </header>
-      <p>
-        Arcticode AS er et nytt og spennende selskap som driver med å utvikle applikasjoner. Vi ønsker å løse
-        hverdagslige problemer og utfordringer.
-
-      </p>
-      <p>
-        Vi er her for å gjøre din dag lettere gjennom våre produkter og tjenester. Dette har vi tenkt å gjøre ved godt
-        samarbeid av både brukere og kunder ut ifra behov.
-      </p>
-    </div>
-    <a href="#two" class="button style2 down anchored">Next</a>
-  </section>
-
-  <!-- Two -->
-  <section id="two" class="main style2 left dark fullscreen">
-    <div class="content box style2">
-      <header>
-        <h2>Hva gjør vi</h2>
-      </header>
-      <p>
-        Vi lager applikasjoner og tjenester som skal være til nytte for våre kunder. Det er mye som kan gjøres lettere
-        i livet med applikasjoner som er enkle å ta i bruk. Vi i Arcticode er meget interessert i å finne løsninger
-        folk virkelig kan ha nytte av som gjør disse små tingene i livet enklere.
-      </p>
-    </div>
-    <a href="#work" class="button style2 down anchored">Next</a>
-  </section>
-
-  <!-- Work -->
-  <section id="work" class="main style3 primary">
-    <div class="content container">
-      <header>
-        <h2>Vårt arbeid</h2>
-        <p>
-          Vi er snart klar til å lansere en ny plattform for utelivsbransjen. Den vil utvikle seg ut ifra hva markedet
-          ønsker. Ettersom at flere skulle ønske å bli med i dette samfunnet vill den også bli enda mer skreddersydd
-          etter behov for både bruker og utestedene.</p>
-        <p>
-          Denne plattformen vill være tilgjengelig både for Android og iOS. Den vil være brukervennlig for den
-          generelle bruker og godt tilpasningsdyktig ut ifra hva utesteder måtte ønske samt feedback vi får fra
-          brukere.
-        </p>
-      </header>
-
-      <div class="container small gallery">
-        <div class="row flush images">
-          <div class="6u">
-            <a href="images/topps-app2.png" class="image full l">
-              <img src="images/topps-app2.png" title="topps App" alt="topps App" />
-            </a>
-          </div>
-          <div class="6u">
-            <a href="images/phone.png">
-              <img src="images/phone.png" title="topps Web" alt="topps Web" height="auto" width="60%" />
-            </a>
+        <div class="container small gallery">
+          <div class="row flush images">
+            <div class="6u">
+              <a href="images/topps-app2.png" class="image full l">
+                <img
+                  src="images/topps-app2.png"
+                  title="topps App"
+                  alt="topps App"
+                />
+              </a>
+            </div>
+            <div class="6u">
+              <a href="images/phone.png">
+                <img
+                  src="images/phone.png"
+                  title="topps Web"
+                  alt="topps Web"
+                  height="auto"
+                  width="60%"
+                />
+              </a>
+            </div>
           </div>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- Contact -->
-  <section id="contact" class="main style3 secondary">
-    <div class="content container">
-      <header>
-        <h6>
-          <a class="info" href="contact.html" target="_blank">Ta kontakt med oss</a>
-        </h6>
-        <br>
-      </header>
-    </div>
-  </section>
+    <!-- Contact -->
+    <section id="contact" class="main style3 secondary">
+      <div class="content container">
+        <header>
+          <h6>
+            <a class="info" href="contact.html" target="_blank"
+              >Ta kontakt med oss</a
+            >
+          </h6>
+          <br />
+        </header>
+      </div>
+    </section>
 
-  <!-- Footer -->
-  <footer id="footer">
-
-    <!--
+    <!-- Footer -->
+    <footer id="footer">
+      <!--
     <ul class="actions">
 						<li><a href="#" class="fa solo fa-twitter"><span>Twitter</span></a></li>
 						<li><a href="#" class="fa solo fa-facebook"><span>Facebook</span></a></li>
@@ -191,23 +242,22 @@
 						<li><a href="#" class="fa solo fa-instagram"><span>Instagram</span></a></li>
           </ul>
           -->
-    <ul>
-      <li id="orgInfo">Arcticode AS<br> Orgnr: 920 359 507<br> Orrevegen 246 4352 KLEPPE</li>
-      <li id="terms"><a href="terms.html">Terms and Agreements</a></li>
-      <li id="terms"><a href="privacy.html">Privacy Policy</a></li>
-      <li id="terms"><a href="cookie.html">Cookie Policy</a></li>
-    </ul>
+      <ul>
+        <li id="orgInfo">
+          Arcticode AS<br />
+          Orgnr: 920 359 507<br />
+          Orrevegen 246 4352 KLEPPE
+        </li>
+        <li id="terms"><a href="terms.html">Terms and Agreements</a></li>
+        <li id="terms"><a href="privacy.html">Privacy Policy</a></li>
+        <li id="terms"><a href="cookie.html">Cookie Policy</a></li>
+      </ul>
 
-    <!-- Menu -->
-    <ul class="menu">
-      <li>&copy; arcticode 2018</li>
-      <li>Design:
-        <a href="http://html5up.net/">HTML5 UP</a>
-      </li>
-    </ul>
-
-  </footer>
-
-</body>
-
+      <!-- Menu -->
+      <ul class="menu">
+        <li>&copy; arcticode 2018</li>
+        <li>Design: <a href="http://html5up.net/">HTML5 UP</a></li>
+      </ul>
+    </footer>
+  </body>
 </html>
